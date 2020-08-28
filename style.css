@@ -1,0 +1,120 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap');
+html{
+	width: 100%;
+	height: 100%;
+	/*parralax*/
+	overflow: hidden;
+}
+body{
+	height: 100%;
+	width: 100%;
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	color: #212121;
+	/*parallax*/
+	perspective: 4px; /*adding depth*/
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+/*make header ocupy full viewport heigth and width*/
+header{
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	/*parallax*/
+	transform-style: preserve-3d;
+}
+
+/*create ::before pseudo element for header and add backgorund image*/
+header::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	background: url(img/photo1.jpg);
+	background-size: cover;
+	z-index: 0;
+	/*parallax*/
+	transform: translateZ(-4px) scale(2);
+}
+/*image is now in front, lets bring the textahead and style it*/
+header div{
+	position: absolute;
+	z-index: 1;
+/*	border:1px solid red;
+*/	top: 50%;
+	padding: 0 2rem;
+	font-family: 'Roboto', sans-serif;
+	/*parallax*/
+	transform: translateZ(-2px) scale(1.5);
+}
+header h1{
+	font-size: 4.5rem;
+	font-weight: 700;
+	color: #009688;
+}
+header h2{
+	font-size: 2.2rem;
+	font-weight: 300;
+	margin-top: 1rem;
+}
+/*styling text section*/
+section{
+	width: 100%;
+	background-color: white;
+	/*parallax*/
+	z-index: 1;
+	position: relative;
+}
+section .container{
+	max-width: 1000px;
+	margin: auto;
+	padding:80px 40px;
+}
+.container h3{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 3rem;
+}
+.container p{
+	padding-top: 2rem;
+	line-height: 1.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
